@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Image Slideshow</title>
+    <style>
+        /* Styles for the slideshow container */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Style for the images in the slideshow */
+        .slideshow-img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        /* Style for the caption text */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Style for the navigation buttons */
+        .nav-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            font-size: 24px;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <img class="slideshow-img" src="static/1.png" alt="Image 1">
+        <img class="slideshow-img" src="static/2.png" alt="Image 2">
+        <img class="slideshow-img" src="static/4.png" alt="Image 3">
+        <!-- Add more images as needed -->
+
+        <div class="caption">Buy the Fish that you love</div>
+        <div class="caption">Green and Fish are Better Together </div>
+        <div class="caption">Hole lot of plants</div>
+        <!-- Add captions corresponding to the images -->
+
+        <!-- Navigation buttons -->
+        <button class="nav-btn prev-btn" onclick="prevSlide()">&#60;</button>
+        <button class="nav-btn next-btn" onclick="nextSlide()">&#62;</button>
+    </div>
+
+    <script>
+        // JavaScript for the interactive image slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow-img');
+        const captions = document.querySelectorAll('.caption');
+        const slideCount = slides.length;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = slideCount - 1;
+            } else if (index >= slideCount) {
+                currentSlide = 0;
+            }
+
+            slides.forEach((slide, i) => {
+                if (i === currentSlide) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+
+            captions.forEach((caption, i) => {
+                if (i === currentSlide) {
+                    caption.style.opacity = 1;
+                } else {
+                    caption.style.opacity = 0;
+                }
+            });
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        // Automatically advance the slideshow every 3 seconds (3000 milliseconds) without animation
+        setInterval(nextSlide, 3000);
+
+        // Show the first slide initially
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

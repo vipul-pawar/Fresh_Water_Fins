@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Cards</title>
+    <style>
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Add margin between rows */
+        }
+
+        .card {
+            width: calc(25% - 10px); /* 25% for each card with reduced spacing for four columns */
+            margin-right: 10px; /* Add spacing between cards */
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove right margin for the last card in each row */
+        }
+
+        .card:hover {
+            transform: translateY(5px);
+            background-color: #f7f7f7; /* Change background color on hover */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            font-weight: bold;
+        }
+
+        .reviews {
+            color: #ff9900; /* Star color */
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e74c3c; /* Price color */
+        }
+
+        /* Change image on hover for each card */
+        .card1:hover img {
+            content: url('static/f2.jfif'); /* Hover image for card 1 */
+        }
+
+        .card2:hover img {
+            content: url('static/p2.jfif'); /* Hover image for card 2 */
+        }
+
+        .card3:hover img {
+            content: url('static/f4.jfif'); /* Hover image for card 3 */
+        }
+
+        .card4:hover img {
+            content: url('static/p4.jfif'); /* Hover image for card 4 */
+        }
+
+        /* Change image on hover for each card in the second row */
+        .card5:hover img {
+            content: url('static/f6.jfif'); /* Hover image for card 5 */
+        }
+
+        .card6:hover img {
+            content: url('static/p6.jfif'); /* Hover image for card 6 */
+        }
+
+        .card7:hover img {
+            content: url('static/f8.jfif'); /* Hover image for card 7 */
+        }
+
+        .card8:hover img {
+            content: url('static/p8.jfif'); /* Hover image for card 8 */
+        }
+    </style>
+</head>
+<body>
+    <!-- Row 1 -->
+    <div class="card-row">
+        <!-- Card 1 -->
+        <div class="card card1">
+            <img src="static/f1.jfif" alt="Fish Image">
+            <h3>Fancy Guppy</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9734;
+            </div>
+            <div class="price">
+                ₹500
+            </div>
+        </div>
+
+        <!-- Add more cards for Row 1 -->
+        <!-- Card 2 -->
+        <div class="card card2">
+            <img src="static/p1.jfif" alt="Plant Image">
+            <h3>Anubias Nana</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <div class="price">
+                ₹250
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card3">
+            <img src="static/f3.jfif" alt="Fish Image">
+            <h3>Neon Tetra</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <div class="price">
+                ₹350
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card card4">
+            <img src="static/p3.jfif" alt="Plant Image">
+            <h3>Amazon Sword</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9734;&#9734;
+            </div>
+            <div class="price">
+                ₹180
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="card-row">
+        <!-- Card 1 -->
+        <div class="card card5">
+            <img src="static/f5.jfif" alt="Fish Image">
+            <h3>Betta Fish</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <div class="price">
+                ₹450
+            </div>
+        </div>
+
+        <!-- Add more cards for Row 2 -->
+        <!-- Card 2 -->
+        <div class="card card6">
+            <img src="static/p5.jfif" alt="Plant Image">
+            <h3>Java Fern</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9734;&#9734;
+            </div>
+            <div class="price">
+                ₹200
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card7">
+            <img src="static/f7.jfif" alt="Fish Image">
+            <h3>Goldfish</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9734;
+            </div>
+            <div class="price">
+                ₹300
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card card8">
+            <img src="static/p7.jfif" alt="Plant Image">
+            <h3>Rotala Indica</h3>
+            <div class="reviews">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <div class="price">
+                ₹280
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

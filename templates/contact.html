@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact FreshWaterFin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9f4;
+            color: #333;
+            background: url('path-to-your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .contact-section {
+            background: linear-gradient(to bottom, #b8e4c9, #ffffff);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 2.5em;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .contact-section form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section button {
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .contact-section button:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <h1>Contact FreshWaterFin</h1>
+        <p>If you have any questions, feedback, or inquiries, feel free to get in touch with us. We’re here to help!</p>
+        {% csrf_token %}
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
